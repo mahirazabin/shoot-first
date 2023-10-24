@@ -1,0 +1,218 @@
+/* Course: SENG 513 */
+/* Date: OCT 22, 2023 */
+/* Assignment 2 */
+/* Name: Mahira Zabin */
+/* UCID: 30150211 */
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "IBM Plex Sans", sans-serif;
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  gap: 4rem;
+  padding: 0 8rem;
+}
+
+.nav {
+  width: 100%;
+  padding: 1rem 0;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.nav-heading-title {
+  font-size: 3rem;
+}
+.nav-btn-container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.nav-btn-rules {
+  display: none;
+  padding: 1rem;
+  background-color: #87448e;
+  border-radius: 0.5rem;
+  color: #ffffff;
+}
+.nav-btn-rules-active {
+  display: block;
+  position: absolute;
+  top: 100%;
+  right: 0;
+}
+
+.game-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.game-container-bg {
+  position: absolute;
+  width: 100%;
+  height: calc(100% + 92px);
+  z-index: 1;
+  top: -30px;
+  left: 0;
+}
+
+.game-text {
+  text-align: center;
+  color: #ffffff;
+}
+
+.footer {
+  width: 100%;
+  padding: 1rem 0;
+  color: white;
+  margin-top: auto;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.btn_primary {
+  background-color: #4392f1;
+  color: #ffffff;
+}
+
+.btn_primary:hover {
+  background-color: #0e5fc0;
+}
+
+.player-image {
+  position: absolute;
+  height: 5rem;
+  z-index: 10;
+  margin-bottom: -5px;
+}
+.player-image-1 {
+  filter: hue-rotate(180deg);
+}
+.player-image-2 {
+  filter: hue-rotate(270deg);
+}
+
+.stats-bar {
+  position: absolute;
+  top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  z-index: 10;
+  background-color: #000000;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  gap: 0.5rem;
+}
+.stats-bar p {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+.stats-bar-left {
+  left: 1rem;
+}
+.stats-bar-right {
+  right: 1rem;
+}
+.stats-bar-val {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: column;
+  color: #ffffff;
+  width: 100%;
+}
+.stats-bar-val div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.stats-bar-health {
+  width: 16rem;
+  height: 1rem;
+  background: #f95738;
+}
+.stats-bar-health div {
+  height: 100%;
+  width: 50%;
+  background-color: #09e85e;
+}
+
+.flip {
+  transform: scaleX(-1);
+}
+
+.obstacle {
+  width: 2rem;
+  position: absolute;
+  z-index: 10;
+}/*# sourceMappingURL=index.css.map */

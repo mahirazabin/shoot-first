@@ -1,0 +1,231 @@
+/* Course: SENG 513 */
+/* Date: OCT 22, 2023 */
+/* Assignment 2 */
+/* Name: Mahira Zabin */
+/* UCID: 30150211 */
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+* {
+	margin: 0;
+}
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	font-family: 'IBM Plex Sans', sans-serif;
+	background-color: black;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+#root,
+#__next {
+	isolation: isolate;
+}
+
+$black: #000000;
+$white: #ffffff;
+$red: #f95738;
+$blue: #4392f1;
+$green: #09e85e;
+$purple: #a657ae;
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: start;
+	gap: 4rem;
+	padding: 0 8rem;
+}
+
+.nav {
+	width: 100%;
+	padding: 1rem 0;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	&-heading {
+		&-title {
+			font-size: 3rem;
+		}
+	}
+
+	&-btn-container {
+		display: flex;
+		justify-content: end;
+		align-items: center;
+	}
+
+	&-btn-rules {
+		display: none;
+		padding: 1rem;
+		background-color: darken($purple, 10%);
+		border-radius: 0.5rem;
+		color: $white;
+		&-active {
+			display: block;
+			position: absolute;
+			top: 100%;
+			right: 0;
+		}
+	}
+}
+
+.game-container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	&-bg {
+		position: absolute;
+		width: 100%;
+		height: calc(100% + 92px);
+		z-index: 1;
+		top: -30px;
+		left: 0;
+	}
+}
+
+.game-text {
+	text-align: center;
+	color: $white;
+}
+
+.footer {
+	width: 100%;
+	padding: 1rem 0;
+	color: white;
+	margin-top: auto;
+}
+
+.btn {
+	cursor: pointer;
+	padding: 1rem 2rem;
+	outline: none;
+	border: none;
+	border-radius: 0.5rem;
+}
+
+.btn_primary {
+	background-color: $blue;
+	color: $white;
+}
+
+.btn_primary:hover {
+	background-color: darken($blue, 20%);
+}
+
+.player-image {
+	position: absolute;
+	height: 5rem;
+	z-index: 10;
+	margin-bottom: -5px;
+	&-1 {
+		filter: hue-rotate(180deg);
+	}
+
+	&-2 {
+		filter: hue-rotate(270deg);
+	}
+}
+
+.stats-bar {
+	position: absolute;
+	top: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: start;
+	z-index: 10;
+
+	background-color: $black;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	gap: 0.5rem;
+
+	& p {
+		font-weight: bold;
+		font-size: 1.5rem;
+		color: $white;
+	}
+
+	&-left {
+		left: 1rem;
+	}
+
+	&-right {
+		right: 1rem;
+	}
+	&-val {
+		display: flex;
+		align-items: start;
+		justify-content: space-between;
+		flex-direction: column;
+		color: $white;
+		width: 100%;
+
+		& div {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+		}
+	}
+
+	&-health {
+		width: 16rem;
+		height: 1rem;
+		background: $red;
+		& div {
+			height: 100%;
+			width: 50%;
+			background-color: $green;
+		}
+	}
+}
+
+.flip {
+	transform: scaleX(-1);
+}
+
+.obstacle {
+	width: 2rem;
+	position: absolute;
+	z-index: 10;
+}
