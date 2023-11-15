@@ -1,6 +1,6 @@
 /* Course: SENG 513 */
-/* Date: OCT 22, 2023 */
-/* Assignment 2 */
+/* Date: Nov 10, 2023 */
+/* Assignment 3 */
 /* Name: Mahira Zabin */
 /* UCID: 30150211 */
 /*
@@ -62,7 +62,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: start;
+  align-items: flex-start;
   gap: 4rem;
   padding: 0 8rem;
 }
@@ -81,7 +81,7 @@ body {
 }
 .nav-btn-container {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
 }
 .nav-btn-rules {
@@ -90,6 +90,7 @@ body {
   background-color: #87448e;
   border-radius: 0.5rem;
   color: #ffffff;
+  z-index: 99;
 }
 .nav-btn-rules-active {
   display: block;
@@ -112,7 +113,7 @@ body {
   width: 100%;
   height: calc(100% + 92px);
   z-index: 1;
-  top: -30px;
+  top: -31px;
   left: 0;
 }
 
@@ -145,11 +146,20 @@ body {
   background-color: #0e5fc0;
 }
 
-.player-image {
+.player-container {
   position: absolute;
-  height: 5rem;
-  z-index: 10;
-  margin-bottom: -5px;
+  height: 4rem;
+  z-index: 11;
+  max-width: 2rem;
+  overflow: visible;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.player-image {
+  height: 3rem;
+  transform: scale(1.5);
 }
 .player-image-1 {
   filter: hue-rotate(180deg);
@@ -164,7 +174,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: start;
+  align-items: flex-start;
   z-index: 10;
   background-color: #000000;
   padding: 1rem;
@@ -184,7 +194,7 @@ body {
 }
 .stats-bar-val {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   justify-content: space-between;
   flex-direction: column;
   color: #ffffff;
@@ -211,8 +221,17 @@ body {
   transform: scaleX(-1);
 }
 
-.obstacle {
+.obstactle {
   width: 2rem;
   position: absolute;
+  z-index: 12;
+}
+
+.bullet {
+  width: 1rem;
+  height: 0.5rem;
+  position: absolute;
   z-index: 10;
+  background-color: #ffffff;
+  border-radius: 0 5px 5px 0;
 }/*# sourceMappingURL=index.css.map */
