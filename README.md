@@ -24,4 +24,10 @@ Mechanics:
 - Last alive wins!
 - Dynamic health and ammo counter
 
+### Demo
+
+
+https://github.com/mahirazabin/shoot-first/assets/92553688/680166d5-2f26-4656-908e-65eb50eaaffa
+
+
 Made for SENG 513.
